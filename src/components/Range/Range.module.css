@@ -1,0 +1,57 @@
+.RangeContainer{
+  position: relative;
+  bottom: 7%;
+  left: 15%;
+}
+
+.Range{
+  position: relative;
+  z-index: 2;
+  -webkit-appearance: none;
+  width: 70%;
+  height: 15px;
+  border-radius: 5px;
+  outline: none;
+  background-color: transparent;
+}
+
+.Range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  background: url('../../assets/icons/range.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.RangeBar {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 70%;
+  z-index: 1;
+  height: 15px;
+  background-color: grey;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+
+.RangeBarFill{
+  display: block;
+  width: 0%;
+  height: 100%;
+  background-color: #fff
+}
+
+
+.RangeTextWrap {
+
+}
+
+.RangeText {
+
+}

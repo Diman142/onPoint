@@ -1,0 +1,37 @@
+.Label {
+  width: 75px;
+  height: 75px;
+  background-color: #393e66;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  background-position: center;
+}
+
+.LabelNumber{
+  color: #fff;
+  font-size: 52px;
+
+}
+
+.LabelText{
+  color: #fff;
+  font-size: 18px;
+}
+
+.LabelArrow{
+  position: relative;
+  display: inline-block;
+}
+
+
+.LabelArrow::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: -5px;
+  bottom: -20px;
+  border: 6px solid transparent;
+  border-top: 14px solid #fff;
+
+}

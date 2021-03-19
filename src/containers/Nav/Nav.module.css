@@ -1,0 +1,25 @@
+.Nav {
+  position: absolute;
+  right: 3%;
+  top: 40%;
+}
+
+.NavList {
+  display: flex;
+  flex-direction: column;
+}
+
+.NavListItem:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.NavListLink {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background-color: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+
