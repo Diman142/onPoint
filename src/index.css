@@ -59,8 +59,17 @@ table {
 	border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
-  max-width: 1440px;
+  max-width: 956px;
   margin: 0 auto;
   padding: 0 30px;
+}
+
+
+.activeLink {
+  background-color: #f78b1f !important;
 }

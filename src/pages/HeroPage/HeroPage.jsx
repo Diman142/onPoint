@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import classes from './HeroPage.module.css'
 import { Redirect } from 'react-router-dom'
-
+import Nav from "../../containers/Nav/Nav";
 
 const HeroPage = () => {
 
@@ -28,6 +28,7 @@ const HeroPage = () => {
       }
     }}>
       <div className="container">
+      <Nav activePage={2}/>
         <h1 className={classes.HeroTitle }>Основа Терапии - Патогенез СД-2</h1>
       </div>
     </section>

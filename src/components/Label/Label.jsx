@@ -3,9 +3,6 @@ import classes from './Label.module.css'
 
 const Label = ({config}) => {
 
-  console.log(config)
-
-
   return (
     <div className={classes.Label} style={{backgroundImage: `url(${config[2]})`, ...config[0]}}>
       <span className={classes.LabelNumber} style={config[3].style}>{config[3].number}</span>

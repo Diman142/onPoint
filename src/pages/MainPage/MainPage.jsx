@@ -12,6 +12,7 @@ import bowel from '../../assets/icons/bowel.png'
 import stomach from '../../assets/icons/stomach.png'
 import infection from '../../assets/icons/infection.png'
 import { Redirect } from 'react-router-dom'
+import Nav from "../../containers/Nav/Nav";
 
 const style1 = [
   [
@@ -751,6 +752,7 @@ const MainPage = () => {
         setToPrevPage(true)
       }
     }}>
+      <Nav activePage={3}/>
       <div className={classes.MainTabContainer} >
 
       <div className={classes.MainTabWrapper}>
@@ -801,14 +803,14 @@ const MainPage = () => {
             <div className={classes.MainTabthreeResistenceContainer}>
               <span className={classes.MainTabthreeResistenceIcon} style={{backgroundImage: `url(${muscule})`}}></span>
               <div className={classes.MainTabthreeResistenceWrap}>
-                <span className={classes.MainTabthreeResistenceNum}>7</span>
+                <span className={classes.MainTabthreeResistenceNum}>5</span>
                 <span className={classes.MainTabthreeResistenceText}>Мышцы</span>
               </div>
             </div>
             <div className={classes.MainTabthreeResistenceContainer}>
               <span className={classes.MainTabthreeResistenceIcon} style={{backgroundImage: `url(${lipid})`}}></span>
               <div className={classes.MainTabthreeResistenceWrap}>
-                <span className={classes.MainTabthreeResistenceNum}>8</span>
+                <span className={classes.MainTabthreeResistenceNum}>4</span>
                 <span className={classes.MainTabthreeResistenceText}>Жир</span>
               </div>
             </div>

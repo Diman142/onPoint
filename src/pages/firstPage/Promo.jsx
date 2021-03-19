@@ -104,29 +104,34 @@ const Promo = () => {
     {toSecondPage ? <Redirect to="/hero" />
     :
     <section className={classes.Promo} onTouchStart={(event) => {
+
       startY = event.targetTouches[0].clientY
-    }} onTouchMove={(event) => {
+    }}
+    onTouchMove={(event) => {
       endY = event.targetTouches[0].clientY
-    }} onTouchEnd={() => {
+    }}
+    onTouchEnd={() => {
       if(endY - startY < -90){
         setToSecondPage(true)
       }
     }}>
+
       <div className="container">
         <Nav />
+
         {styles.map((item, index) => {
           return <Loader config={item} key={index}/>
         })}
+
         <div className={classes.PromoWrapper}>
           <h1 className={classes.PromoTitle}>Всегда ли цели терапии СД2 на поверхности?</h1>
         </div>
+
       </div>
-      <a className={classes.PromoLink}>Листайте вниз</a>
+
+      <a className={classes.PromoLink} href="/#">Листайте вниз</a>
     </section>
-
-
     }
-
     </>
   );
 };

@@ -5,9 +5,6 @@ import classes from './Loader.module.css'
 
 const Loader = ({config}) => {
 
-
-  console.log(config)
-
   return (
     <div style={{...config[0]}}>
       <span style={{...config[1]}}>{config[3]}</span>
