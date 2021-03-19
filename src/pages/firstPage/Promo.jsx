@@ -103,13 +103,16 @@ const Promo = () => {
     <>
     {toSecondPage ? <Redirect to="/hero" />
     :
-    <section className={classes.Promo} onTouchStart={(event) => {
+    <section className={classes.Promo}
 
+    onTouchStart={(event) => {
       startY = event.targetTouches[0].clientY
     }}
+
     onTouchMove={(event) => {
       endY = event.targetTouches[0].clientY
     }}
+
     onTouchEnd={() => {
       if(endY - startY < -90){
         setToSecondPage(true)

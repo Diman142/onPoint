@@ -743,46 +743,62 @@ const MainPage = () => {
   return (
     <>
     {toPrevPage ? <Redirect to="/hero"/> :
-    <section className={classes.Main} onTouchStart={(event) => {
+
+    <section className={classes.Main}
+
+    onTouchStart={(event) => {
       startY = event.targetTouches[0].clientY
-    }} onTouchMove={(event) => {
+    }}
+
+    onTouchMove={(event) => {
       endY = event.targetTouches[0].clientY
-    }} onTouchEnd={() => {
+    }}
+
+    onTouchEnd={() => {
       if(endY - startY > 90){
         setToPrevPage(true)
       }
     }}>
+
       <Nav activePage={3}/>
       <div className={classes.MainTabContainer} >
 
       <div className={classes.MainTabWrapper}>
 
         <div className={classes.MainTabOne} ref={tab1}>
+
           {style1.map((item, index) => {
             return <Label config={item} key={index}/>
           })}
+
           <p className={classes.MainTabOneText}>Гипоглекимия</p>
+
         </div>
 
         <div className={classes.MainTabTwo} ref={tab2}>
+
           {style2.map((item,index) => {
             return <Label config={item} key={index}/>
           })}
+
           <p className={classes.MainTabTwoText}>Гипергликимия</p>
         </div>
 
         <div className={classes.MainTabThree} ref={tab3}>
-        {style3.map((item, index) => {
+
+          {style3.map((item, index) => {
             return <Label config={item} key={index}/>
 
           })}
+
           <p className={classes.MainTabthreeNote}>амилин</p>
+
           <div className={classes.MainTabthreeSecond}>
             <span className={classes.MainTabthreeNumber}>2</span>
             <span className={classes.MainTabthreeText}>Инкретинового эффекта</span>
             <span className={classes.MainTabthreeArrow}></span>
-
           </div>
+
           <div className={classes.MainTabthreeThree}>
             <span className={classes.MainTabthreeThreeNumber}>3 </span>
             <span className={classes.MainTabthreeThreeText}>Деффекта a-клеток</span>
@@ -819,8 +835,8 @@ const MainPage = () => {
 
       </div>
       </div>
-        <Range tab1 = {tab1} tab2 = {tab2}  tab3 = {tab3}/>
 
+      <Range tab1 = {tab1} tab2 = {tab2}  tab3 = {tab3}/>
     </section>
     }
     </>

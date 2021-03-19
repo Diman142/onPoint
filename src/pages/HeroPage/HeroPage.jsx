@@ -16,21 +16,30 @@ const HeroPage = () => {
     <>
     {toPrevPage ?  <Redirect to="/" /> : null}
     {toNextPage ?  <Redirect to="/main" /> : null}
-    <section className={classes.Hero} onTouchStart={(event) => {
+    <section className={classes.Hero}
+
+    onTouchStart={(event) => {
       startY = event.targetTouches[0].clientY
-    }} onTouchMove={(event) => {
+    }}
+
+    onTouchMove={(event) => {
       endY = event.targetTouches[0].clientY
-    }} onTouchEnd={() => {
+    }}
+
+    onTouchEnd={() => {
       if(endY - startY < -90){
         settoNextPage(true)
       } else if(endY - startY > 90){
         settoPrevPage(true)
       }
     }}>
+
       <div className="container">
-      <Nav activePage={2}/>
+
+        <Nav activePage={2}/>
         <h1 className={classes.HeroTitle }>Основа Терапии - Патогенез СД-2</h1>
       </div>
+
     </section>
     </>
   )
